@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Memo Markdown</title>
+        <link rel="stylesheet" type="text/css"href="C:\Users\Arnaud\Documents\GitHub\Learning-Environnment\style.css" media="all"/>
+    </head>
+<body> 
+    <p align="center">
+            <img src="http://kirkstrobeck.github.io/whatismarkdown.com/img/markdown.png" alt="logo markdown" width="500" height="350" title="Logo Markdown" />
+    </p>   
+    <h1>Markdown Cheatsheet</h1>
+    <div class="Definition">
+        <h2>Qu'est-ce que Markdown ?</h2>
+        <p><b>Selon Wikipedia :</b></p>
+        <blockquote>
+            <p class="citation">Markdown est un langage de balisage léger créé en 2004 par John Gruber avec Aaron Swartz1,2.
+            <br> 
+            Son but est d'offrir une syntaxe facile à lire et à écrire. 
+            Un document balisé par Markdown peut être lu en l'état sans donner l’impression d'avoir été balisé ou formaté par des instructions particulières.
+            <br>
+            Un document balisé par Markdown peut être converti en HTML ou en autres formats. 
+            <br>Bien que la syntaxe Markdown ait été influencée par plusieurs filtres de conversion de texte existants vers HTML — dont Setext3, atx4, Textile, reStructuredText, Grutatext5 et EtText6 —, la source d’inspiration principale est le format du courrier électronique en mode texte.
+            </p>
+        </blockquote>
+        <br>
+    </div>
+    <div class="Traitement">
+        <h2>Syntaxe</h2>
+        <article class="titre"> <h3>Les titres</h3>
+            <p class="instruction">Pour réaliser des titres, on précède le texte visé de dièse (#) comme suit :<p>
+            <blockquote>
+                <ul>
+                    <li> # Le Titre souhaité</li>
+                    <li>## Le sous-titre</li>
+                    <li>### Le sous-titre du sous-titre</li>
+                </ul>
+            </blockquote>
+            <p class="instruction">On peut changer l'importance d'un titre en ajoutant des dièses. Ainsi un '#' fera équivaut à h1, deux équivaut à h2 etc...</p>
+        </article>
+            <h3>Les paragraphes</h3>
+            <p class="instruction">Pour faire différents paragraphes il suffit de laisser au moins un ligne vide entre 2 autre comme suit :</p>
+
+        <article class="code">
+            <pre>
+                <code>         
+                ``` markdown
+                    Un premier paragraphe
+                    &lt; !-- Une ligne vide -- &gt;
+                     Un second paragraphe
+                 ```
+                </code>
+            </pre>
+        </article>
+
+        <h3>Mise en gras</h3>
+        <p class="instruction">Pour mettre en gras du text il suffit de l'entourer par 2 astérisques (**) comme suit :</p>
+        <br>
+        <pre>
+            <article class="code"><code>**le texte à mettre en gras**</code>
+            </article>
+        </pre>
+    
+        <h3>Mise en italique</h3>
+        <p class="instruction">Pour mettre du texte en <EM>italique</EM>, on l'entoure d'un underscore (_) comme suit :</p>
+
+        _<em>Texte en italique</em>_
+    </div>
+
+    <div class="link">   
+        <h3>Liens</h3>
+
+        <article class="code">
+            <pre>
+            <code>
+        ```
+        [Texte du lien](http://url.com/ "Title")
+        ```
+            </code>
+            </pre>
+            </article>
+        
+    </div>
+    <div class="liste">
+        <h3>Liste à puce</h3>
+            <p class="instruction">Pour créer une liste à puce, il suffit d'ajouter un astérisque en début de ligne.</p>
+        <pre>
+         <code>```
+                 * Exemple 1
+                 * Exemple 2
+                 * Exemple 3
+                ```
+            </code>
+        </pre>
+        <ul>
+            <li>Exemple 1</li>
+            <li>Exemple 2</li>
+            <li>Exemple 3</li>
+        </ul>
+    <hr>
+        <p class="instruction">Vous pouvez également créer des sous-puces de cette manière.</p>
+
+        <pre>
+            <code>  ```
+            * Example 1
+            * Example 2
+                * Example 2.1
+                * Example 2.2
+             * Example 3
+                 ```
+            </code>
+        </pre>  
+    
+        <ul>
+            <li>Example 1</li>
+            <li>Example 2</li>
+            <ul>
+                <li>Example 2.1</li>
+                <li>Example 2.2</li>
+            </ul>
+            <li>Example 3</li>
+        </ul>
+    <hr>
+        <p class="instruction">Vous pouvez également appliquer des listes numérotées, pour cela, rien de plus simple :</p>
+
+        <pre>
+            <code>```
+                1. Numéro 1
+                2. Numéro 2
+                3. Numéro 3
+                ```
+            </code>
+        </pre>
+        <ol>
+            <li>Numéro 1</li>
+            <li>Numéro 2</li>
+            <li>Numéro 3</li>
+        </ol>
+    <hr>
+        <p class="instruction">Il est aussi possible de faire une liste de tâches :</p>
+
+        <pre>
+            <code>```   
+                * [ ] Tâche1
+                * [ ] Tâche2
+                * [ ] Tâche3
+                ```
+            </code>
+        </pre>
+
+        <ul class="task">
+            <li><input type="checkbox">Tâche 1</li>
+            <li><input type="checkbox">Tâche 2</li>
+            <li><input type="checkbox">Tâche 3</li>
+        </ul>
+    <hr>
+        <p class="instruction">Pour checker une tâche il suffit de mettre un 'x' entre les crochets :</p>
+
+        <pre>
+            <code>     ```   
+                    * [x] Tâche1
+                    * [x] Tâche2
+                    * [x] Tâche3
+                ```
+            </code>
+        </pre>
+        <ul class="task">
+            <li><input type="checkbox" checked> Tâche 1</li>
+            <li><input type="checkbox" checked> Tâche 2</li>
+            <li><input type="checkbox" checked> Tâche 3</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="citations">
+        <h3>Citations</h3>
+
+        <p class="instruction">Si vous souhaitez appliquer une citation, vous devrez procéder comme ceci :</p>
+
+        <pre>
+            <code>  ```
+                    > Citation d'un grand philosophe alcoolique
+                    > Citation d'un autre grand philosophe (mais sobre cette fois)
+                ```
+            </code>
+        </pre>
+
+        <blockquote><em>Citation d'un grand philosophe alcoolique</em></blockquote>
+
+        <blockquote><em>Citation d'un autre grand philosophe (mais sobre cette fois)</em></blockquote>
+    </div>
+    <hr>
+    <div class="tableau">
+        <h3>Création d'un tableau</h3>
+        <p>Il faut séparer les colonnes par des traits verticaux (|) et des deux-points :</p>
+
+        <pre>
+            <code>```
+                    | Tables        | Are           | Cool  |
+                    | ------------- |:-------------:| -----:|
+                    |     cell      | cell          | cell  |
+                    |     cell      | cell          | cell  |
+                    |     cell      | cell          | cell  |
+                    ```
+            </code>
+        </pre>
+    </div>
+    <hr>
+    <div class="insertionCode">   
+        <h3>Insertion de code</h3>
+        <p class="instruction">Il faut entourer les lignes de codes avec 3 accents graves :</p>
+
+        <pre> 
+            <code>  ```
+                chaine = "Becode Power"
+                for lettre in chaine:
+                print(lettre)
+                ```
+            </code>
+        </pre>  
+        <hr>      
+        <h3>Note de bas de page</h3>
+        <p class="instruction">Syntaxe avec les crochets et l'accent circonflexe.
+        Voir la note en bas de page. [^1]</p>
+
+
+        <hr>
+        <h3>Créer un ID (dans ce cas sur un heading)</h3>
+        <p class="instruction">Syntaxe avec {} et #</p>
+        <pre>
+            <code>```
+                ### My Great Heading {#custom-id}
+                ```
+            </code>
+        </pre>    
+        <hr>
+        <h3>Texte barré</h3>
+            <p class="instruction">Avec le signe ~</p>
+        <pre>
+            <code>```
+                    ~~La terre est plate.~~
+                    ```
+            </code> 
+        </pre>      
+        <hr>
+        <h3>Couleur Syntaxique</h3>
+        <p class="instruction">Pour obtenir une ligne de code colorée :</p>
+        <ol>
+            <li>Insérer trois accents grave</li>
+            <li>Ajouter le nom du language dans lequel vous allez rédiger votre code</li>
+            <li>Passer à la ligne</li>
+            <li>Inscrire le code à afficher</li>
+            <li>Fermer avec trois accents grave</li>
+        </ol>
+        <br>
+        <strong>Exemple :</strong>
+
+        <pre>
+            <code>
+                ```javascript
+                console.log('Hello World');
+                ```
+            </code>
+        </pre>
+        <strong>Résultat obtenu :</strong>
+
+
+        <p class="console"><font color="blue">console.log</font>(<font color="orange">'Hello World'</font>);</p>
+    </div>
+    <div class="media">
+        <hr>
+        <h3>Emoji</h3>
+
+        <p class="instruction">Si d'aventure il vous prendrait l'envie d'ajouter des emojis dans vos documents, il suffit d'inscrire la commande correspondante :</p>
+
+        <strong>Exemple : </strong>
+        <pre>
+            <code>```
+                    :trollface:
+                ```
+            </code>
+        </pre>    
+
+        <strong>Résultat obtenu : </strong>
+
+        <blockquote class="emoji">&#x1F609;</blockquote>
+
+        <p class="instruction">Pour obtenir la liste complète des emoji disponnibles sur gitHub, c'est <a href="https://gist.github.com/rxaviers/7360908">par ici!</a>
+        <hr>
+        <h3>Insérer une image statique</h3>
+        <p class="instruction">Pour insérer une image, rien de plus simple : </p>
+        <ol>
+            <li>Commencer la ligne de code avec un point d'exclamation '!'</li>
+            <li>Entre [ ] insérer le titre que vous désirez pour votre image</li>
+            <li>Entre parenthèse ( ) ajouter l'url de l'image</li>
+        </ol>
+
+        <strong>Exemple :</strong>
+        <pre>
+            <code>![Titre de l'image](url de l'image) </code>
+        </pre>
+        <p align="center">
+            <img src="https://images.unsplash.com/photo-1525422847952-7f91db09a364?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ce6622924dae3b9be067e1778a6b8707&w=1000&q=80" alt="un travail d'équipe" title="Un travail d'équipe" width="50%"/>
+        </p>
+        <hr>
+        <h3>Insérer un gif :</h3>
+
+        <p class="instruction">Suivre les mêmes instructions que ci-dessus, veiller à disposer d'une url possédant l'extension du gif:</p>
+
+        <strong>Exemple :</strong>
+        <pre>
+            <code>   
+            ![Titre du gif](http://url-du-gif-qui-roxx.gif)
+            </code>
+        </pre> 
+        <p align="center">
+            <img src="https://media.giphy.com/media/MM0Jrc8BHKx3y/giphy.gif" alt="gifquirox" title="Gif qui roxx"/>
+        </p>
+    </div>
+</body>
+</html>
