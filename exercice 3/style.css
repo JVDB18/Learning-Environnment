@@ -1,0 +1,28 @@
+body {
+    background-color: #03132D;
+
+}
+nav {
+    display: inline;
+    
+}
+ul, li {
+    list-style-type: none;
+    color: white;
+    display: inline;
+    padding: 100px;
+}
+header {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+blockquote {
+    text-align: center;
+    color: white;
+    background-color: rgba(3, 19, 45, 0.40);
+
+
+}
